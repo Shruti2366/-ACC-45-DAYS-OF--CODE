@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int a[20], n, i, pass = 0, temp;
+cout << "enter elements";
+cin>>n;
+cout<< " enter the elements of unsorted array:";
+for (i=0; i<n; i++)
+{
+cin >> a [i];
+}
+for (pass = 0; pass<n-1; pass++)
+{
+for(i=0; i<n-1-pass; i++)
+{
+if (a[i] > a [i+1])
+{
+temp = a[i];
+a[i] = a[i+1];
+a[i+1] = temp;
+}}
+}
+cout<<" sorted elements:"<<endl;
+for (i=0; i<n; i++)
+{
+cout<<a[i]<<" "
+}
+return 0;
+}
