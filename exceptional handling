@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+//Here we specify the exceptions that this function
+//throws.
+void fun(int *ptr, int x) throw (int*, int)//dynamic exception specification
+{
+  if(ptr == Null)
+  throw ptr;
+  
+  if(x == 0)
+    
+    throw x;
+    /*some functionality*/
+}
+
+int main()
+{
+
+ try{
+  fun(Null,0);
+  
+  }
+  
+  catch(...){
+  
+  cout<<"caught exception from fun()";
+  
+  }
+  return 0;
+  }
